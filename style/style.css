@@ -1,0 +1,12 @@
+body{
+  background-image: url('../images/trees-3464777_1920.jpg');
+  background-size: cover; 
+  /* height: 100%; */
+  /* opacity: 50%; */
+}
+
+.episodes{
+  width: 400px;
+  display: block;
+  margin: 10px;
+}
