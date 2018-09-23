@@ -9,7 +9,7 @@ episodes.forEach(one => {
     })
     document.body.style.backgroundImage = "url('./images/giphy.gif')";
     setTimeout(() => {
-      window.location.href = `./html/episode${one.getAttribute('id')[one.getAttribute('id').length-1]}.html`;
+      window.location.href = `./last-quest/episode${one.getAttribute('id')[one.getAttribute('id').length-1]}.html`;
     }, 3000);
   }
 

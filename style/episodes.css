@@ -1,0 +1,24 @@
+
+body {
+    background: black;
+    width: 100vw;
+}
+
+.main {
+    width: 80vw;
+    margin: -5px auto;
+}
+
+img {
+    margin-bottom: -3px;
+    width: 100%;
+}
+
+.parallax {
+    position: relative;
+}
+
+.parallax .foreground {
+    position: absolute;
+    top: 0;
+}
