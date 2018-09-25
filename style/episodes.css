@@ -16,9 +16,17 @@ img {
 
 .parallax {
     position: relative;
+    overflow: hidden;
 }
 
-.parallax .foreground {
+.bcg {
+    width: 100%;
+    z-index: 1;
+}
+
+.foreground {
+    width: 100%;
     position: absolute;
     top: 0;
+    z-index: 2;
 }
