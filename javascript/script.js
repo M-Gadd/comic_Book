@@ -116,3 +116,12 @@ allComics.forEach(one => {
     }
   }
 })
+
+
+
+
+for (let i=0; i<= 38; i++ ) {
+
+  document.body.style.backgroundImage = `url('./images/episode/sanasndaskdas${i}')`
+
+}
