@@ -1,0 +1,57 @@
+body{
+  height: 100vh;
+  background-image: url('./../images/homepage/trees-3464777_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+#cockpit-bcg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: url( './../images/homepage/cockpit_UP_LOW_title.png' );
+  background-size: cover;
+  background-position: center;
+  z-index: 5;
+}
+
+#episodes-bcg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#episodes-bcg img {
+  width: 100%;
+  position: absolute;
+}
+
+.home-menu {
+  height: 400px;
+  width: 420px;
+  margin-left: 40px;
+  background: url( './../images/homepage/cadre_menu_episodes.png' ) no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  padding: 25px 42px 30px 30px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+.episodes{
+  width: 100%;
+  display: block;
+}
+
+.episodes:hover {
+  cursor: pointer;
+}
+
+
+
+/* .hidden{
+  display: none;
+} */
