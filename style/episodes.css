@@ -7,6 +7,7 @@ body {
 .main {
     width: 80vw;
     margin: -5px auto;
+    display: none;
 }
 
 img {
