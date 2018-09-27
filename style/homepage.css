@@ -1,20 +1,25 @@
 body{
   height: 100vh;
-  background-image: url('./../images/homepage/trees-3464777_1920.jpg');
+  background-image: url('./../images/homepage/fond_espace.png');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
 }
 
-#cockpit-bcg {
+#cockpit-bcg-up,
+#cockpit-bcg-down {
   width: 100vw;
-  height: 100vh;
   position: absolute;
-  background: url( './../images/homepage/cockpit_UP_LOW_title.png' );
-  background-size: cover;
-  background-position: center;
   z-index: 5;
+}
+
+#cockpit-bcg-up {
+  top: -10px;
+}
+
+#cockpit-bcg-down {
+  bottom: 0;
 }
 
 #episodes-bcg {
@@ -25,19 +30,21 @@ body{
   z-index: 1;
 }
 
-#episodes-bcg img {
+#episodes-bcg img,
+#hyperspace-gif
+{
   width: 100%;
   position: absolute;
 }
 
 .home-menu {
   height: 400px;
-  width: 420px;
+  width: 400px;
   margin-left: 40px;
   background: url( './../images/homepage/cadre_menu_episodes.png' ) no-repeat;
   background-size: 100% auto;
   background-position: top center;
-  padding: 25px 42px 30px 30px;
+  padding: 23px 40px 28px 28px;
   box-sizing: border-box;
   z-index: 10;
 }

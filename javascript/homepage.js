@@ -1,22 +1,25 @@
-var bool = true;
+// var bool = true;
 let isClicked = false;
 var episodes = document.querySelectorAll('.episodes')
 
 $( '.bg' ).toggle();
+$( '#hyperspace-gif' ).hide();
 
 episodes.forEach(one => {
-  
-  // document.querySelectorAll( '.bg' ).setAttribute( 'visibility', 'hidden' );
   
   // ON CLICK /////////////
   one.onclick = function(){
     isClicked = true;
     let id = one.getAttribute('id');
     $( '.bg' ).hide();
-    document.body.style.backgroundImage = `url('./images/homepage/homepage-gif-bcg.gif')`;
+    $( '#hyperspace-gif' ).show();
     setTimeout(() => {
-      window.location.href = `./last-quest/episode${id}.html`;
-    }, 2000);
+
+      // $( '#imagesequence' ).ready( function() {
+        
+        window.location.href = `./last-quest/episode${id}.html`;
+    // })
+    }, 1800);
   }
 
   
@@ -24,7 +27,6 @@ episodes.forEach(one => {
   one.onmouseover = function(){
       if( !isClicked ) {
         let id = one.getAttribute('id');
-        console.log( $(`#bg-${id}`)[0] );
         $(`#bg-${id}`).toggle();
         one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/glow/ep${id}_glow.png` );
       }
@@ -36,7 +38,7 @@ episodes.forEach(one => {
         let id = one.getAttribute('id');
         $( '.bg' ).hide();
         one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
-        document.body.style.backgroundImage = `url('./images/homepage/trees-3464777_1920.jpg')`;
+        document.body.style.backgroundImage = `url('./images/homepage/fond_espace.png')`;
       }
     }
     
@@ -98,30 +100,3 @@ episodes.forEach(one => {
 // }
 
 // }
-
-
-var audio = new Audio('../audio/One_Republic_-_All_the_right_moves.mp3');
-var audio2 = new Audio('../audio/Cheb_Khaled-01.Cest_La_Vie.mp3');
-var audio3 = new Audio('../audio/03. She Wolf (Falling To Pieces) (Feat Sia) (www.SongsLover.pk).mp3')
-var allAudios = [audio, audio2, audio3];
-var allComics = document.querySelectorAll('.allComics');
-allComics.forEach(one => {
-  one.onclick = function(){
-    console.log(one);
-    if (one.getAttribute('id')[one.getAttribute('id').length-1] === '3') {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-      audio.play();
-    } else if ((one.getAttribute('id')[one.getAttribute('id').length-1] === '5' )) {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-      audio2.play();
-    } else {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-    }
-  }
-})
