@@ -1,10 +1,57 @@
-body{
+
+
+/* LOADER
+ * =========================================
+ */
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.loader .stuff {
+  height: 30vh;
+  width: 100%;
+}
+
+.loader img {
+  max-width: 90px;
+}
+
+.loader * {
+  margin-bottom: 30px;
+}
+
+
+
+/* MAIN
+ * =========================================
+ */
+
+.main{
   height: 100vh;
+  width: 100vw;
   background-image: url('./../images/homepage/fond_espace.png');
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
+}
+
+
+#cockpit-elements {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #cockpit-bcg-up,
@@ -19,7 +66,7 @@ body{
 }
 
 #cockpit-bcg-down {
-  bottom: 0;
+  bottom: -60px;
 }
 
 #episodes-bcg {
@@ -36,6 +83,12 @@ body{
   width: 100%;
   position: absolute;
 }
+
+
+
+/* EPISODES MENU
+ * =========================================
+ */
 
 .home-menu {
   height: 400px;

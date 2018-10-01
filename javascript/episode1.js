@@ -1,4 +1,7 @@
 
+$(window).on( "load", () => {
+  $( '.loader' ).fadeOut( 1000 );
+});
 
 // PARALLAX THINGY
 ////////////////////////////////////////////////////////////////////
@@ -6,9 +9,9 @@
 $( document ).ready( function() {
     $( '.main' ).fadeIn( 1000 );
 })
+var controller = new ScrollMagic.Controller({vertical: true});
 
 // TOAD /////////////////////////////////
-var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -16,13 +19,13 @@ var slideParallaxScene = new ScrollMagic.Scene({
     triggerHook: 1,
     duration: '250%'
 })
-.setTween(TweenMax.from('.foreground-toad', 1, {y: '40%', ease:Power0.easeNone}))
+.setTween(TweenMax.from('.foreground-toad', 1, {y: '20%', ease:Power0.easeNone}))
 .addTo(controller)
 
 
 
 // GIANTS /////////////////////////////////
-var controller = new ScrollMagic.Controller({vertical: true});
+// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -30,13 +33,13 @@ var slideParallaxScene = new ScrollMagic.Scene({
     triggerHook: 1,
     duration: '280%'
 })
-.setTween(TweenMax.from('.bcg-giants', 1, {y: '-40%', ease:Power0.easeNone}))
+.setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-10%', ease:Power0.easeNone}, {y: '20%', ease:Power0.easeNone}))
 .addTo(controller)
 
 
 
 // FIGHT /////////////////////////////////
-var controller = new ScrollMagic.Controller({vertical: true});
+// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -114,10 +117,10 @@ var tween = TweenMax.to(obj, 0.5,
 );
 
 // init controller
-var controller = new ScrollMagic.Controller();
+// var controller = new ScrollMagic.Controller();
 
 // build scene
-var scene = new ScrollMagic.Scene({triggerElement: "#imagesequence", duration: 450})
+var scene = new ScrollMagic.Scene({triggerElement: "#imagesequence", duration: 600})
         .setTween(tween)
         // .addIndicators() // add indicators (requires plugin)
         .addTo(controller);
@@ -130,7 +133,7 @@ $("form.move input[name=duration]:radio").change(function () {
 
 
 // RUINS /////////////////////////////////
-var controller = new ScrollMagic.Controller({vertical: true});
+// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -144,7 +147,7 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 
 // GUARDS /////////////////////////////////
-var controller = new ScrollMagic.Controller({vertical: true});
+// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({

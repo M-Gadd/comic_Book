@@ -1,4 +1,41 @@
 
+
+/* LOADER
+ * =========================================
+ */
+
+.loader {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background: black;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+.loader .stuff {
+    height: 30vh;
+    width: 100%;
+}
+
+.loader img {
+    max-width: 90px;
+}
+
+.loader * {
+    margin-bottom: 30px;
+}
+
+
+
+/* BODY
+ * =========================================
+ */
+
 body {
     background: black;
     width: 100vw;
@@ -31,10 +68,6 @@ img {
     top: 0;
     z-index: 2;
 }
-
-/* .show {
-    display: block;
-} */
 
 .hide {
     display: none;

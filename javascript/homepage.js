@@ -1,3 +1,8 @@
+
+$(window).on( "load", () => {
+  $( '.loader' ).fadeOut( 1000 );
+});
+
 // var bool = true;
 let isClicked = false;
 var episodes = document.querySelectorAll('.episodes')
