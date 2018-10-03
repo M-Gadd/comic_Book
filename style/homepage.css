@@ -101,17 +101,31 @@
   box-sizing: border-box;
   z-index: 10;
 }
+
 .episodes{
   width: 100%;
-  display: block;
+  /* display: block; */
+  /* z-index: 11; */
 }
 
 .episodes:hover {
   cursor: pointer;
 }
 
+.episode-box {
+  position: relative;
+}
 
+.glow {
+  z-index: 5;
+}
 
-/* .hidden{
+.no-glow {
+  position: absolute;
+  width: 100%;
+  z-index: 6;
+}
+
+.hidden {
   display: none;
-} */
+}

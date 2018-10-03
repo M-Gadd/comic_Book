@@ -1,53 +1,98 @@
 
+
 $(window).on( "load", () => {
   $( '.loader' ).fadeOut( 1000 );
 });
 
 // var bool = true;
 let isClicked = false;
-var episodes = document.querySelectorAll('.episodes')
+let noGlow = document.querySelectorAll('.no-glow');
+let glow = document.querySelectorAll( '.glow' );
+let id;
 
 $( '.bg' ).toggle();
 $( '#hyperspace-gif' ).hide();
 
-episodes.forEach(one => {
+// noGlow.forEach(one => {
   
+//   // ON HOVER /////////////
+//   one.onmouseover = function(){
+//       if( !isClicked ) {
+//         id = one.getAttribute('id');
+//         $( '.bg' ).hide();
+//         $(`#bg-${id}`).show();
+//         $( '.no-glow' ).removeClass( 'hidden' );
+//         one.classList.add( 'hidden' );
+//       }
+//     }
+    
+//     // // ON MOUSE OUT /////////////
+//     // one.onmouseout = function(){
+//     //   if( !isClicked ) {
+//     //     let id = one.getAttribute('id');
+//     //     // one.classList.remove( 'hidden' );
+//     //     // $( '#1a' ).addClass( 'hidden' );
+//     //     // one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
+//     //   }
+//     // }
+    
+// })
+
+// glow.forEach( one => {
+
+//     // ON CLICK /////////////
+//     one.onclick = function(){
+//       isClicked = true;
+//       // let id = one.getAttribute('id');
+//       $( '.bg' ).hide();
+//       $( '#hyperspace-gif' ).show();
+//       setTimeout(() => {
+//           window.location.href = `./last-quest/episode${id}.html`;
+//       }, 2000);
+//     }
+// })
+
+
+let boxes = document.querySelectorAll( '.episode-box' );
+
+boxes.forEach( each => {
+
   // ON CLICK /////////////
-  one.onclick = function(){
+  each.onclick = function(){
     isClicked = true;
-    let id = one.getAttribute('id');
+    let id = each.getAttribute('id').slice(1);
     $( '.bg' ).hide();
     $( '#hyperspace-gif' ).show();
     setTimeout(() => {
-
-      // $( '#imagesequence' ).ready( function() {
-        
         window.location.href = `./last-quest/episode${id}.html`;
-    // })
-    }, 1800);
+    }, 2000);
   }
 
-  
   // ON HOVER /////////////
-  one.onmouseover = function(){
-      if( !isClicked ) {
-        let id = one.getAttribute('id');
-        $(`#bg-${id}`).toggle();
-        one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/glow/ep${id}_glow.png` );
-      }
+  each.onmouseover = function(){
+    if( !isClicked ) {
+      let id = each.getAttribute('id').slice(1);
+      $( '.bg' ).hide();
+      $(`#bg-${ id }`).show();
+      $( '.no-glow' ).show();
+      $( `#${ id }` ).hide();
     }
-    
-    // ON MOUSE OUT /////////////
-    one.onmouseout = function(){
-      if( !isClicked ) {
-        let id = one.getAttribute('id');
-        $( '.bg' ).hide();
-        one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
-        document.body.style.backgroundImage = `url('./images/homepage/fond_espace.png')`;
-      }
+  }
+
+  // ON MOUSE OUT /////////////
+  each.onmouseout = function(){
+    if( !isClicked ) {
+      let id = each.getAttribute('id').slice(1);
+      $( '.bg' ).hide();
+      $( '.no-glow' ).show();
+      // one.classList.remove( 'hidden' );
+      // one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
     }
-    
+  }
+
 })
+
+
 
 // var ep1 = document.getElementById('ep1');
 // ep1.onclick = function(){
