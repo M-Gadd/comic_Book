@@ -4,6 +4,32 @@ $(window).on( "load", () => {
   $( '.loader' ).fadeOut( 1000 );
 });
 
+
+
+////////////////////////////////////////////////////////////////////////////
+// LANGUAGE SELECTION
+////////////////////////////////////////////////////////////////////////////
+
+console.log( $( '#fr' ));
+
+$( '#fr' )[0].onclick = function() {
+  if( window.location.href.includes( 'EN' ) ) {
+    window.location.href = `./../FR/index.html`;
+  }
+}
+
+$( '#uk' )[0].onclick = function() {
+  if( window.location.href.includes( 'FR' ) ) {
+    window.location.href = `./../EN/index.html`;
+  }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////
+// EPISODES SELECTION AND INTERACTIONS
+////////////////////////////////////////////////////////////////////////////
+
 // var bool = true;
 let isClicked = false;
 let noGlow = document.querySelectorAll('.no-glow');
