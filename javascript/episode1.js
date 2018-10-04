@@ -25,7 +25,6 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 
 // GIANTS /////////////////////////////////
-// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -39,7 +38,6 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 
 // FIGHT /////////////////////////////////
-// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -53,45 +51,6 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 
 // CLOUD APPROACHING /////////////////////////////////
-// define images
-// var images =
-// document.querySelectorAll( '.myimg' );
-// [
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0000.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0001.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0002.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0003.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0004.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0005.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0005.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0006.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0007.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0008.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0009.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0010.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0011.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0012.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0013.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0014.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0015.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0016.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0017.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0018.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0019.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0020.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0021.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0022.png",
-//   "./../images/EN/episode-1/P18_EN_sequence/P18_EN0023.png"
-// ];
-
-// Promise.all(images.map(url =>
-//   new Promise((resolve) => {
-//     const img = new Image();
-//     img.src = url;
-//     img.onload = resolve;
-//   })
-// ))
-// .then(() => console.log("IMAGES DONE"));
 
 // TweenMax can tween any property of any object. We use this object to cycle through the array
 var obj = {curImg: 0};
@@ -117,7 +76,6 @@ var tween = TweenMax.to(obj, 0.5,
 );
 
 // init controller
-// var controller = new ScrollMagic.Controller();
 
 // build scene
 var scene = new ScrollMagic.Scene({triggerElement: "#imagesequence", duration: 600})
@@ -133,7 +91,6 @@ $("form.move input[name=duration]:radio").change(function () {
 
 
 // RUINS /////////////////////////////////
-// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
@@ -147,7 +104,6 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 
 // GUARDS /////////////////////////////////
-// var controller = new ScrollMagic.Controller({vertical: true});
 
 //parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({

@@ -13,45 +13,6 @@ let id;
 $( '.bg' ).toggle();
 $( '#hyperspace-gif' ).hide();
 
-// noGlow.forEach(one => {
-  
-//   // ON HOVER /////////////
-//   one.onmouseover = function(){
-//       if( !isClicked ) {
-//         id = one.getAttribute('id');
-//         $( '.bg' ).hide();
-//         $(`#bg-${id}`).show();
-//         $( '.no-glow' ).removeClass( 'hidden' );
-//         one.classList.add( 'hidden' );
-//       }
-//     }
-    
-//     // // ON MOUSE OUT /////////////
-//     // one.onmouseout = function(){
-//     //   if( !isClicked ) {
-//     //     let id = one.getAttribute('id');
-//     //     // one.classList.remove( 'hidden' );
-//     //     // $( '#1a' ).addClass( 'hidden' );
-//     //     // one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
-//     //   }
-//     // }
-    
-// })
-
-// glow.forEach( one => {
-
-//     // ON CLICK /////////////
-//     one.onclick = function(){
-//       isClicked = true;
-//       // let id = one.getAttribute('id');
-//       $( '.bg' ).hide();
-//       $( '#hyperspace-gif' ).show();
-//       setTimeout(() => {
-//           window.location.href = `./last-quest/episode${id}.html`;
-//       }, 2000);
-//     }
-// })
-
 
 let boxes = document.querySelectorAll( '.episode-box' );
 
@@ -64,7 +25,7 @@ boxes.forEach( each => {
     $( '.bg' ).hide();
     $( '#hyperspace-gif' ).show();
     setTimeout(() => {
-        window.location.href = `./last-quest/episode${id}.html`;
+      window.location.href = `./episode${id}.html`;
     }, 2000);
   }
 
@@ -85,8 +46,6 @@ boxes.forEach( each => {
       let id = each.getAttribute('id').slice(1);
       $( '.bg' ).hide();
       $( '.no-glow' ).show();
-      // one.classList.remove( 'hidden' );
-      // one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
     }
   }
 

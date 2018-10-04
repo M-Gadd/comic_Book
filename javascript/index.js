@@ -1,0 +1,1 @@
+window.location.href = `./../last-quest/EN/index.html`;
