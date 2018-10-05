@@ -47,17 +47,17 @@
 }
 
 .languages-menu {
-  width: 12vw;
+  width: 8vw;
   position: fixed;
   top: 30px;
-  left: 30px;
+  left: 70px;
   display: flex;
   justify-content: space-between;
   z-index: 20;
 }
 
 .languages-menu img {
-  height: 50px;
+  height: 30px;
   align-self: center;
   border: 1px solid white;
 }

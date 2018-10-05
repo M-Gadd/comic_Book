@@ -1,19 +1,31 @@
 
+
+
+////////////////////////////////////////////////////////////////////////////
+// LOADER
+////////////////////////////////////////////////////////////////////////////
+
 $(window).on( "load", () => {
   $( '.loader' ).fadeOut( 1000 );
+  $( '.main' ).fadeIn( 1000 );
+  $( '.main' ).css({
+    'height': 'auto',
+    'overflow': 'visible'
+  })
 });
 
-// PARALLAX THINGY
-////////////////////////////////////////////////////////////////////
 
 $( document ).ready( function() {
-    $( '.main' ).fadeIn( 1000 );
 })
+
+////////////////////////////////////////////////////////////////////////////
+// PARALLAX THINGY
+////////////////////////////////////////////////////////////////////////////
+
 var controller = new ScrollMagic.Controller({vertical: true});
 
 // TOAD /////////////////////////////////
 
-//parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.toad',
     triggerHook: 1,
@@ -26,7 +38,6 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 // GIANTS /////////////////////////////////
 
-//parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.giants',
     triggerHook: 1,
@@ -39,7 +50,6 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 // FIGHT /////////////////////////////////
 
-//parallax scene
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.fight',
     triggerHook: 1,
