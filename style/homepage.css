@@ -32,6 +32,43 @@
 
 
 
+/* HEADER
+ * =========================================
+ */
+
+ .header {
+  position: fixed;
+  top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 70px;
+  z-index: 20;
+ }
+
+ .header > img {
+  height: 60px;
+ }
+
+.languages-menu {
+  width: 8vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.languages-menu img {
+  height: 30px;
+  align-self: center;
+  border: 1px solid white;
+}
+
+.header img:hover {
+  cursor: pointer;
+}
+
+
+
 /* MAIN
  * =========================================
  */
@@ -44,26 +81,6 @@
   background-position: center;
   display: flex;
   align-items: center;
-}
-
-.languages-menu {
-  width: 8vw;
-  position: fixed;
-  top: 30px;
-  left: 70px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 20;
-}
-
-.languages-menu img {
-  height: 30px;
-  align-self: center;
-  border: 1px solid white;
-}
-
-.languages-menu img:hover {
-  cursor: pointer;
 }
 
 #cockpit-elements {
