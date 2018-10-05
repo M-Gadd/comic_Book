@@ -29,9 +29,9 @@ var controller = new ScrollMagic.Controller({vertical: true});
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.toad',
     triggerHook: 1,
-    duration: '250%'
+    duration: '220%'
 })
-.setTween(TweenMax.from('.foreground-toad', 1, {y: '20%', ease:Power0.easeNone}))
+.setTween(TweenMax.fromTo('.foreground-toad', 1, {y: '35%', ease:Power0.easeNone},{y: '-3%', ease:Power0.easeNone}))
 .addTo(controller)
 
 
@@ -41,9 +41,9 @@ var slideParallaxScene = new ScrollMagic.Scene({
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.giants',
     triggerHook: 1,
-    duration: '280%'
+    duration: '260%'
 })
-.setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-10%', ease:Power0.easeNone}, {y: '20%', ease:Power0.easeNone}))
+.setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-20%', ease:Power0.easeNone}, {y: '4%', ease:Power0.easeNone}))
 .addTo(controller)
 
 
@@ -53,7 +53,7 @@ var slideParallaxScene = new ScrollMagic.Scene({
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.fight',
     triggerHook: 1,
-    duration: '150%'
+    duration: '180%'
 })
 .setTween(TweenMax.fromTo('.foreground-fight', 1, {y: '50%', ease:Power0.easeNone}, {y: '0%', ease:Power0.easeNone}))
 .addTo(controller)
@@ -85,8 +85,6 @@ var tween = TweenMax.to(obj, 0.5,
   }
 );
 
-// init controller
-
 // build scene
 var scene = new ScrollMagic.Scene({triggerElement: "#imagesequence", duration: 600})
         .setTween(tween)
@@ -106,9 +104,9 @@ $("form.move input[name=duration]:radio").change(function () {
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.ruins',
     triggerHook: 1,
-    duration: '200%'
+    duration: '150%'
 })
-.setTween(TweenMax.fromTo('.bcg-ruins', 1, {y: '0%', ease:Power0.easeNone}, {y: '30%', ease:Power0.easeNone}))
+.setTween(TweenMax.fromTo('.bcg-ruins', 1, {y: '-15%', ease:Power0.easeNone}, {y: '4%', ease:Power0.easeNone}))
 .addTo(controller)
 
 
@@ -119,9 +117,9 @@ var slideParallaxScene = new ScrollMagic.Scene({
 var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.guards',
     triggerHook: 1,
-    duration: '250%'
+    duration: '190%'
 })
-.setTween(TweenMax.fromTo('.foreground-guards', 1, {y: '30%', ease:Power0.easeNone}, {y: '0%', ease:Power0.easeNone}))
+.setTween(TweenMax.fromTo('.foreground-guards', 1, {y: '26%', ease:Power0.easeNone}, {y: '-10%', ease:Power0.easeNone}))
 .addTo(controller)
 
 
