@@ -32,7 +32,7 @@
 
 
 
-/* BODY
+/* BODY - GENERAL
  * =========================================
  */
 
@@ -73,4 +73,22 @@ img {
 
 .hide {
     display: none;
+}
+
+
+
+/* EPISODE 2
+ * =========================================
+ */
+
+.foreground.forest-1,
+.foreground.forest-2,
+.foreground.forest-3,
+.foreground.forest-4
+{
+    position: absolute;
+}
+
+.bcg.bcg-forest {
+    position: relative;
 }
