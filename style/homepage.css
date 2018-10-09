@@ -52,7 +52,7 @@
  }
 
 .languages-menu {
-  width: 8vw;
+  width: 140px;
   display: flex;
   justify-content: space-between;
 }
