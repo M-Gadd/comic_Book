@@ -96,7 +96,7 @@ boxes.forEach( each => {
     $( '#hyperspace-gif' ).show();
     setTimeout(() => {
       window.location.href = `./episode${id}.html`;
-    }, 2000);
+    }, 1800);
   }
 
   // ON HOVER /////////////
