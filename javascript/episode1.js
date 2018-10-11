@@ -5,41 +5,79 @@
 // PARALLAX THINGY
 ////////////////////////////////////////////////////////////////////////////
 
+let isFullScreen = false;
+if( screen.height === window.innerHeight ) {
+  isFullScreen = true;
+}
+
 var controller = new ScrollMagic.Controller({vertical: true});
 
 // TOAD /////////////////////////////////
 
-var slideParallaxScene = new ScrollMagic.Scene({
+if( !isFullScreen ){
+  var slideParallaxScene = new ScrollMagic.Scene({
+      triggerElement: '.toad',
+      triggerHook: 1,
+      duration: '220%'
+  })
+  .setTween(TweenMax.fromTo('.foreground-toad', 1, {y: '35%', ease:Power0.easeNone},{y: '-3%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
+else {
+  var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.toad',
     triggerHook: 1,
-    duration: '220%'
+    duration: '200%'
 })
 .setTween(TweenMax.fromTo('.foreground-toad', 1, {y: '35%', ease:Power0.easeNone},{y: '-3%', ease:Power0.easeNone}))
 .addTo(controller)
+}
 
 
 
 // GIANTS /////////////////////////////////
 
-var slideParallaxScene = new ScrollMagic.Scene({
+if( !isFullScreen ) {
+  var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.giants',
     triggerHook: 1,
     duration: '260%'
-})
-.setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-20%', ease:Power0.easeNone}, {y: '4%', ease:Power0.easeNone}))
-.addTo(controller)
+  })
+  .setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-20%', ease:Power0.easeNone}, {y: '4%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
+else {
+  var slideParallaxScene = new ScrollMagic.Scene({
+    triggerElement: '.giants',
+    triggerHook: 1,
+    duration: '220%'
+  })
+  .setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-20%', ease:Power0.easeNone}, {y: '4%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
 
 
 
 // FIGHT /////////////////////////////////
 
-var slideParallaxScene = new ScrollMagic.Scene({
+if( !isFullScreen ) {
+  var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.fight',
     triggerHook: 1,
     duration: '180%'
-})
-.setTween(TweenMax.fromTo('.foreground-fight', 1, {y: '50%', ease:Power0.easeNone}, {y: '0%', ease:Power0.easeNone}))
-.addTo(controller)
+  })
+  .setTween(TweenMax.fromTo('.foreground-fight', 1, {y: '50%', ease:Power0.easeNone}, {y: '0%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
+else {
+  var slideParallaxScene = new ScrollMagic.Scene({
+    triggerElement: '.fight',
+    triggerHook: 1,
+    duration: '160%'
+  })
+  .setTween(TweenMax.fromTo('.foreground-fight', 1, {y: '50%', ease:Power0.easeNone}, {y: '0%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
 
 
 
@@ -96,14 +134,24 @@ var slideParallaxScene = new ScrollMagic.Scene({
 
 // GUARDS /////////////////////////////////
 
-//parallax scene
-var slideParallaxScene = new ScrollMagic.Scene({
+if( !isFullScreen ) {
+  var slideParallaxScene = new ScrollMagic.Scene({
     triggerElement: '.guards',
     triggerHook: 1,
     duration: '190%'
-})
-.setTween(TweenMax.fromTo('.foreground-guards', 1, {y: '26%', ease:Power0.easeNone}, {y: '-10%', ease:Power0.easeNone}))
-.addTo(controller)
+  })
+  .setTween(TweenMax.fromTo('.foreground-guards', 1, {y: '26%', ease:Power0.easeNone}, {y: '-10%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
+else {
+  var slideParallaxScene = new ScrollMagic.Scene({
+    triggerElement: '.guards',
+    triggerHook: 1,
+    duration: '170%'
+  })
+  .setTween(TweenMax.fromTo('.foreground-guards', 1, {y: '26%', ease:Power0.easeNone}, {y: '-10%', ease:Power0.easeNone}))
+  .addTo(controller)
+}
 
 
 
