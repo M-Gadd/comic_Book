@@ -23,7 +23,7 @@
 }
 
 .loader img {
-  max-width: 90px;
+  max-width: 120px;
 }
 
 .loader * {
@@ -38,21 +38,21 @@
 
  .header {
   position: fixed;
-  top: 30px;
+  top: 10px;
   display: flex;
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 70px;
+  padding: 0 10px;
   z-index: 20;
  }
 
- .header > img {
+ /* .header img {
   height: 60px;
- }
+ } */
 
 .languages-menu {
-  width: 140px;
+  width: 120px;
   display: flex;
   justify-content: space-between;
 }
@@ -61,6 +61,10 @@
   height: 30px;
   align-self: center;
   border: 1px solid white;
+}
+
+#full-screen-btn {
+  height: 30px;
 }
 
 .header img:hover {
