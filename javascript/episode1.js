@@ -2,23 +2,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////
-// LOADER
-////////////////////////////////////////////////////////////////////////////
-
-$(window).on( "load", () => {
-  $( '.loader' ).fadeOut( 1000 );
-  $( '.main' ).fadeIn( 1000 );
-  $( '.main' ).css({
-    'height': 'auto',
-    'overflow': 'visible'
-  })
-});
-
-
-$( document ).ready( function() {
-})
-
-////////////////////////////////////////////////////////////////////////////
 // PARALLAX THINGY
 ////////////////////////////////////////////////////////////////////////////
 
@@ -77,7 +60,7 @@ var tween = TweenMax.to(obj, 0.5,
     onUpdate: function () {
       if( obj.curImg < 24 ) {
         imagesArr.each(( index, item ) => {
-          if(index === obj.curImg) { console.log( item.classList.remove( 'hide' ))}
+          if(index === obj.curImg) { item.classList.remove( 'hide' )}
           else { item.classList.add( 'hide' )}
         });
       }

@@ -102,7 +102,7 @@
 }
 
 #cockpit-bcg-down {
-  bottom: -60px;
+  bottom: 0px;
 }
 
 #episodes-bcg {
@@ -110,13 +110,9 @@
   height: 100vh;
   position: absolute;
   overflow: hidden;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   z-index: 1;
 }
 
-/* #episodes-bcg img, */
 #hyperspace-gif
 {
   width: 100%;
@@ -163,6 +159,7 @@
   height: auto;
   width: 320px;
   margin-left: 40px;
+  transform: translateY( -12% );
   background: url( './../images/homepage/cadre_menu_episodes.png' ) no-repeat;
   background-size: 100% 100%;
   background-position: top center;
@@ -195,4 +192,36 @@
 
 .hidden {
   display: none;
+}
+
+
+
+/* FOOTER
+ * =========================================
+ */
+
+footer {
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20vw;
+  position: absolute;
+  bottom: 40px;
+  z-index: 30;
+}
+
+footer img {
+  max-height: 35px;
+}
+
+.facebook-placeholder {
+  width: 240px;
+  height: 100px;  
+  background: blue;
+}
+
+.logo-container {
+  width: 256.11px;
 }
