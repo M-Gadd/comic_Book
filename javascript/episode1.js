@@ -2,6 +2,56 @@
 
 
 ////////////////////////////////////////////////////////////////////////////
+// FULLSCREEN
+////////////////////////////////////////////////////////////////////////////
+
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+let isfullScreen = false;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+
+  isfullScreen = true;
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE/Edge */
+    document.msExitFullscreen();
+  }
+
+  isfullScreen = false;
+}
+  
+$( '#full-screen-btn' )[0].onclick = function() {
+  if( !isFullScreen ) {
+    openFullscreen();
+  }
+  if( isFullScreen ) {
+    closeFullscreen();
+  }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////
 // PARALLAX THINGY
 ////////////////////////////////////////////////////////////////////////////
 

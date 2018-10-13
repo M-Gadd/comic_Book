@@ -32,6 +32,23 @@
 
 
 
+/* FULLSCREEN
+ * =========================================
+ */
+
+#full-screen-btn {
+    width: 30px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    opacity: 0.3;
+}
+
+#full-screen-btn:hover {
+    cursor: pointer;
+}
+
+
 /* BODY - GENERAL
  * =========================================
  */
