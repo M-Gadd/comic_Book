@@ -81,9 +81,6 @@ body {
   width: 100vw;
   display: flex;
   align-items: center;
-  background-image: url('./../images/homepage/fond_espace.png');
-  background-size: cover;
-  background-position: center;
 }
 
 #cockpit-elements {
@@ -124,12 +121,22 @@ body {
   background-position: center;
 }
 
-.bg {
+.bg,
+.bg-void
+{
+  position: relative;
+  left: 50%;
+  transform: translateX( -50% );
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: 2;
+}
+
+.bg-void {
+  background-image: url('./../images/homepage/fond_espace.png');
+  background-size: cover;
+  background-position: center;
 }
 
 #bg-1 {
@@ -245,11 +252,44 @@ footer img {
  * ==================================================================================
  */
 
-/* @media ( max-width: 1300px ) {
+@media ( max-width: 1150px ) {
 
   .logo-container {
-    width: 219.52px;
-    height: 30px;
+    width: 182.94px;
+    height: 25px;
   }
 
-} */
+  .bg,
+  .bg-void
+  {
+    width: 140%;
+  }
+
+}
+
+@media ( max-width: 850px ) {
+
+  .logo-container {
+    width: 146.34px;
+    height: 20px;
+  }
+
+  .bg,
+  .bg-void
+  {
+    width: 170%;
+  }
+
+}
+
+@media ( max-width: 425px ) {
+
+  #full-screen-btn {
+    display: none;
+  }
+
+  .bg {
+    display: none;
+  }
+
+}
