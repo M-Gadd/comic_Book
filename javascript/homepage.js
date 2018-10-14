@@ -90,7 +90,7 @@ let noGlow = document.querySelectorAll('.no-glow');
 let glow = document.querySelectorAll( '.glow' );
 let id;
 
-$( '.bg' ).toggle();
+$( '.bg' ).hide();
 $( '#hyperspace-gif' ).hide();
 
 
@@ -130,6 +130,14 @@ boxes.forEach( each => {
   }
 
 })
+
+
+
+////////////////////////////////////////////////////////////////////////////
+// MOBILE
+////////////////////////////////////////////////////////////////////////////
+
+// $( '.bottom-gradient' ).hide();
 
 
 
