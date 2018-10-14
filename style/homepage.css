@@ -223,13 +223,12 @@ body {
 
 footer {
   width: 100vw;
-  height: 240px;
   background: black;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0px 10vw 50px;
+  padding: 60px 10vw 50px;
   z-index: 30;
 }
 
@@ -288,6 +287,28 @@ footer img {
 
 }
 
+@media ( max-width: 780px ) {
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  footer > * {
+    margin-bottom: 30px;
+  }
+
+  .facebook-placeholder {
+    order: 1;
+  }
+
+  .logo-container {
+    text-align: center;
+  }
+  
+}
+
 @media ( max-width: 425px ) {
 
   .main {
@@ -336,23 +357,6 @@ footer img {
     position: absolute;
     bottom: 0px;
     z-index: 20;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  footer > * {
-    margin-bottom: 20px;
-  }
-
-  .facebook-placeholder {
-    order: 1;
-  }
-
-  .logo-container {
-    text-align: center;
   }
 
 }
