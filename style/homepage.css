@@ -186,7 +186,7 @@ body {
   background-position: top center;
   padding: 20px 30px 30px 23px;
   box-sizing: border-box;
-  z-index: 10;
+  z-index: 50;
 }
 
 .episodes{
@@ -290,6 +290,10 @@ footer img {
 
 @media ( max-width: 425px ) {
 
+  .main {
+    flex-direction: column;
+  }
+
   #full-screen-btn,
   #cockpit-bcg-up,
   #cockpit-bcg-down
@@ -297,18 +301,23 @@ footer img {
     display: none;
   }
 
+  #cockpit-elements {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
   #mobile-logo {
     display: block;
     width: 70vw;
-    position: absolute;
-    top: 10px;
-    left: 15vw;
-    margin: 0 auto;
-    z-index: 100;
+    z-index: 20;
   }
 
   .header {
-    top: 190px;
+    position: relative;
     justify-content: center;
   }
   
@@ -326,7 +335,7 @@ footer img {
     background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1));
     position: absolute;
     bottom: 0px;
-    z-index: 100;
+    z-index: 20;
   }
 
   footer {
