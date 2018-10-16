@@ -1,36 +1,45 @@
 var bool = true;
+let isClicked = false;
 var episodes = document.querySelectorAll('.episodes')
 
+$( '.bg' ).toggle();
+
 episodes.forEach(one => {
+  
+  // document.querySelectorAll( '.bg' ).setAttribute( 'visibility', 'hidden' );
+  
+  // ON CLICK /////////////
   one.onclick = function(){
-    bool = false;
-    episodes.forEach(one => {
-      one.classList.add('hidden');
-    })
-    document.body.style.backgroundImage = "url('./images/giphy.gif')";
+    isClicked = true;
+    let id = one.getAttribute('id');
+    $( '.bg' ).hide();
+    document.body.style.backgroundImage = `url('./images/homepage/homepage-gif-bcg.gif')`;
     setTimeout(() => {
-      window.location.href = `./html/episode${one.getAttribute('id')[one.getAttribute('id').length-1]}.html`;
-    }, 3000);
+      window.location.href = `./last-quest/episode${id}.html`;
+    }, 2000);
   }
 
+  
+  // ON HOVER /////////////
   one.onmouseover = function(){
-    document.body.style.backgroundImage = `url('./images/episode${one.getAttribute('id')[one.getAttribute('id').length-1]}.jpg')`;
-  }
-
-})
-
-episodes.forEach(one => {
-  one.onmouseover = function(){
-    document.body.style.backgroundImage = `url('./images/episode${one.getAttribute('id')[one.getAttribute('id').length-1]}.jpg')`;
-    // setTimeout(() => {
-    //   window.location.href = `./html/episode${one.getAttribute('id')[one.getAttribute('id').length-1]}.html`;
-    // }, 3000);
-  }
-
-  one.onmouseout = function(){
-    // document.body.style.backgroundImage = "url('./images/giphy.gif')";
-    document.body.style.backgroundImage = "url('./images/trees-3464777_1920.jpg')";
-  }
+      if( !isClicked ) {
+        let id = one.getAttribute('id');
+        console.log( $(`#bg-${id}`)[0] );
+        $(`#bg-${id}`).toggle();
+        one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/glow/ep${id}_glow.png` );
+      }
+    }
+    
+    // ON MOUSE OUT /////////////
+    one.onmouseout = function(){
+      if( !isClicked ) {
+        let id = one.getAttribute('id');
+        $( '.bg' ).hide();
+        one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
+        document.body.style.backgroundImage = `url('./images/homepage/trees-3464777_1920.jpg')`;
+      }
+    }
+    
 })
 
 // var ep1 = document.getElementById('ep1');

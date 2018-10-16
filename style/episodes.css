@@ -1,0 +1,33 @@
+
+body {
+    background: black;
+    width: 100vw;
+}
+
+.main {
+    width: 80vw;
+    margin: -5px auto;
+    display: none;
+}
+
+img {
+    margin-bottom: -3px;
+    width: 100%;
+}
+
+.parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.bcg {
+    width: 100%;
+    z-index: 1;
+}
+
+.foreground {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
