@@ -118,6 +118,15 @@ footer img {
 
 
 
+@media ( max-width: 480px ) {
+    
+    .main {
+        width: 100vw;
+    }
+
+}
+
+
 /* EPISODE 2
  * =========================================
  */

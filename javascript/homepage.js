@@ -50,8 +50,6 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
     elem.msRequestFullscreen();
   }
-
-  fullScreen = true;
 }
 
 /* Close fullscreen */
@@ -65,8 +63,6 @@ function closeFullscreen() {
   } else if (document.msExitFullscreen) { /* IE/Edge */
     document.msExitFullscreen();
   }
-
-  fullScreen = false;
 }
 
 let isFullScreen = false;
@@ -136,12 +132,6 @@ boxes.forEach( each => {
 })
 
 
-
-////////////////////////////////////////////////////////////////////////////
-// MOBILE
-////////////////////////////////////////////////////////////////////////////
-
-// $( '.bottom-gradient' ).hide();
 
 
 
