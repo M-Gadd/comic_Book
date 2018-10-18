@@ -93,13 +93,13 @@ img {
     display: none;
 }
 
-.parallax-toad {
+/* .parallax-toad {
     top: -100px;
 }
 
 .parallax-giants {
     top: -50px;
-}
+} */
 
 
 /* FOOTER
@@ -129,6 +129,10 @@ footer img {
     
     .main {
         width: 100vw;
+    }
+
+    #full-screen-btn {
+        display: none;
     }
 
 }
