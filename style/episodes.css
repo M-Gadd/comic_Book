@@ -93,6 +93,13 @@ img {
     display: none;
 }
 
+.parallax-toad {
+    top: -100px;
+}
+
+.parallax-giants {
+    top: -50px;
+}
 
 
 /* FOOTER

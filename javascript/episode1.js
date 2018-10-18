@@ -42,7 +42,8 @@ function refreshParallaxes() {
   console.log( 'screen is full:', fullScreen );
   // TOAD /////////////////////////////////
 
-  if( !fullScreen ){
+  // if( !fullScreen ){
+    // $( '.foreground' )[0].classList.remove( 'parallax-toad' );
     var slideParallaxScene = new ScrollMagic.Scene({
         triggerElement: '.toad',
         triggerHook: 1,
@@ -50,24 +51,26 @@ function refreshParallaxes() {
     })
     .setTween(TweenMax.fromTo('.foreground-toad', 1, {y: '35%', ease:Power0.easeNone},{y: '-3%', ease:Power0.easeNone}))
     .addTo(controller)
+  // }
+  // else if( fullScreen ) {
+  //   // $( '.foreground' )[0].classList.add( 'parallax-toad' );
+  //   console.log( 'the parallax sees the fullscreen' );
+  //   var slideParallaxScene = new ScrollMagic.Scene({
+  //     triggerElement: '.toad',
+  //     triggerHook: 1,
+  //     duration: '220%'
+  //   })
+  //   .setTween(TweenMax.fromTo('.foreground-toad', 1, {y: '35%', ease:Power0.easeNone},{y: '-3%', ease:Power0.easeNone}))
+  //   .addTo(controller)
+  // }
 
-  }
-  else if( fullScreen ) {
-    console.log( 'the parallax sees the fullscreen' );
-    var slideParallaxScene = new ScrollMagic.Scene({
-      triggerElement: '.toad',
-      triggerHook: 1,
-      duration: '220%'
-  })
-  .setTween(TweenMax.fromTo('.foreground-toad', 1, {y: '26%', ease:Power0.easeNone},{y: '-3%', ease:Power0.easeNone}))
-  .addTo(controller)
-  }
-
+  // THE PROBLEM HERE IS THAT WHEN ANY VALUE CHANGES BETWEEN THE TWO TWEEN SETTINGS, THE FULLSCREEN ONE STARTS JUMPING
 
 
   // GIANTS /////////////////////////////////
 
   // if( !fullScreen ) {
+    // $( '.foreground' )[1].classList.remove( 'parallax-giants' );
     var slideParallaxScene = new ScrollMagic.Scene({
       triggerElement: '.giants',
       triggerHook: 1,
@@ -76,9 +79,8 @@ function refreshParallaxes() {
     .setTween(TweenMax.fromTo('.bcg-giants', 1, {y: '-20%', ease:Power0.easeNone}, {y: '4%', ease:Power0.easeNone}))
     .addTo(controller)
   // }
-  // WIP
-  // --------------
   // else {
+  //   $( '.foreground' )[1].classList.add( 'parallax-giants' );
   //   var slideParallaxScene = new ScrollMagic.Scene({
   //     triggerElement: '.giants',
   //     triggerHook: 1,
