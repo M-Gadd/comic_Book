@@ -82,6 +82,31 @@ $( '#full-screen-btn' )[0].onclick = function() {
 
 
 ////////////////////////////////////////////////////////////////////////////
+// MUSIC
+////////////////////////////////////////////////////////////////////////////
+
+let musicIsOn = false;
+let soundBox = document.querySelector( '#sound-box' );
+$( '#sound-on' ).hide();
+
+soundBox.onclick = function() {
+
+  if( !musicIsOn ) {
+    musicIsOn = true;
+    $( '#sound-off' ).hide();
+    $( '#sound-on' ).show();
+  }
+  else if( musicIsOn ) {
+    musicIsOn = false;
+    $( '#sound-off' ).show();
+    $( '#sound-on' ).hide();
+  }
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////
 // EPISODES SELECTION AND INTERACTIONS
 ////////////////////////////////////////////////////////////////////////////
 
@@ -118,15 +143,22 @@ episodes.forEach(one => {
     }
     
     // ON MOUSE OUT /////////////
-    one.onmouseout = function(){
-      if( !isClicked ) {
-        let id = one.getAttribute('id');
-        $( '.bg' ).hide();
-        one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
-        document.body.style.backgroundImage = `url('./images/homepage/trees-3464777_1920.jpg')`;
-      }
+  //   one.onmouseout = function(){
+  //     if( !isClicked ) {
+  //       let id = one.getAttribute('id');
+  //       $( '.bg' ).hide();
+  //       one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
+  //       document.body.style.backgroundImage = `url('./images/homepage/trees-3464777_1920.jpg')`;
+  //     }
+  // }
+
+  // ON MOUSE OUT /////////////
+  each.onmouseout = function(){
+    if( !isClicked ) {
+      $( '.bg' ).hide();
+      $( '.no-glow' ).show();
     }
-    
+  } 
 })
 
 
@@ -189,6 +221,9 @@ episodes.forEach(one => {
 // }
 
 // }
+
+var homeAudio = new Audio('../audio/1 MENU/LOOP_Menu.mp3')
+
 
 
 var audio = new Audio('../audio/One_Republic_-_All_the_right_moves.mp3');
