@@ -189,7 +189,12 @@ iframe {
     }
 
     footer {
-        width: 80vw;
+        width: 100vw;
+    }
+
+    nav {
+        width: 80%;
+        margin: 0 auto;
     }
 
 }
