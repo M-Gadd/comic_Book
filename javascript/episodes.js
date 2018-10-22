@@ -23,8 +23,6 @@ $(window).on( "load", () => {
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
-let fullScreen = false;
-
 /* View in fullscreen */
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -36,8 +34,6 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
     elem.msRequestFullscreen();
   }
-
-  isfullScreen = true;
 }
 
 /* Close fullscreen */
@@ -51,15 +47,17 @@ function closeFullscreen() {
   } else if (document.msExitFullscreen) { /* IE/Edge */
     document.msExitFullscreen();
   }
-
-  isfullScreen = false;
 }
-  
+
+let isFullScreen = false;
+
 $( '#full-screen-btn' )[0].onclick = function() {
   if( !isFullScreen ) {
+    isFullScreen = true;
     openFullscreen();
   }
   if( isFullScreen ) {
+    isFullScreen = false;
     closeFullscreen();
   }
 }
