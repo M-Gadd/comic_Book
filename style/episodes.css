@@ -32,22 +32,29 @@
 
 
 
-/* FULLSCREEN
+/* HEADER
  * =========================================
  */
 
-#full-screen-btn {
-    width: 30px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    opacity: 0.3;
-}
-
-#full-screen-btn:hover {
+#full-screen-btn:hover,
+#sound-box:hover {
     cursor: pointer;
 }
 
+.right-hand-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.3;
+}
+
+.right-hand-menu img {
+    height: 30px;
+    width: 30px;
+}
 
 /* BODY - GENERAL
  * =========================================
@@ -171,6 +178,10 @@ iframe {
 
     #full-screen-btn {
         display: none;
+    }
+
+    .right-hand-menu {
+        width: 30px;
     }
 
     .mobile-hide {

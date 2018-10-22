@@ -81,6 +81,31 @@ $( '#full-screen-btn' )[0].onclick = function() {
 
 
 ////////////////////////////////////////////////////////////////////////////
+// MUSIC
+////////////////////////////////////////////////////////////////////////////
+
+let musicIsOn = false;
+let soundBox = document.querySelector( '#sound-box' );
+$( '#sound-on' ).hide();
+
+soundBox.onclick = function() {
+
+  if( !musicIsOn ) {
+    musicIsOn = true;
+    $( '#sound-off' ).hide();
+    $( '#sound-on' ).show();
+  }
+  else if( musicIsOn ) {
+    musicIsOn = false;
+    $( '#sound-off' ).show();
+    $( '#sound-on' ).hide();
+  }
+
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////
 // EPISODES SELECTION AND INTERACTIONS
 ////////////////////////////////////////////////////////////////////////////
 
@@ -123,7 +148,6 @@ boxes.forEach( each => {
   // ON MOUSE OUT /////////////
   each.onmouseout = function(){
     if( !isClicked ) {
-      let id = each.getAttribute('id').slice(1);
       $( '.bg' ).hide();
       $( '.no-glow' ).show();
     }
