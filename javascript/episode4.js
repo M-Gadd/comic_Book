@@ -21,16 +21,16 @@ if( window.innerWidth > 485 ) {
     var tween = TweenMax.to(objEye, 0.5,
         {
         curImg: imagesArrEye.length - 1,	// animate propery curImg to number of images
-        roundProps: "curImg",		    // only integers so it can be used as an array index
-        repeat: 0,						// repeat 0 times
-        immediateRender: true,			// load first image automatically
-        ease: Linear.easeNone,			// show every image the same ammount of time
+        roundProps: "curImg",		        // only integers so it can be used as an array index
+        repeat: 0,						    // repeat 0 times
+        immediateRender: true,			    // load first image automatically
+        ease: Linear.easeNone,			    // show every image the same ammount of time
         onUpdate: function () {
             if( objEye.curImg < 11 ) {
-            imagesArrEye.each(( index, item ) => {
-                if(index === objEye.curImg) { item.classList.remove( 'hide' )}
-                else { item.classList.add( 'hide' )}
-            });
+                imagesArrEye.each(( index, item ) => {
+                    if(index === objEye.curImg) { item.classList.remove( 'hide' )}
+                    else { item.classList.add( 'hide' )}
+                });
             }
         }
         }
@@ -59,16 +59,16 @@ if( window.innerWidth > 485 ) {
     var tween = TweenMax.to(objWings, 0.5,
         {
         curImg: imagesArrWings.length - 1,	// animate propery curImg to number of images
-        roundProps: "curImg",		    // only integers so it can be used as an array index
-        repeat: 0,						// repeat 0 times
-        immediateRender: true,			// load first image automatically
-        ease: Linear.easeNone,			// show every image the same ammount of time
+        roundProps: "curImg",		        // only integers so it can be used as an array index
+        repeat: 0,						    // repeat 0 times
+        immediateRender: true,			    // load first image automatically
+        ease: Linear.easeNone,			    // show every image the same ammount of time
         onUpdate: function () {
             if( objWings.curImg < 16 ) {
-            imagesArrWings.each(( index, item ) => {
-                if(index === objWings.curImg) { item.classList.remove( 'hide' )}
-                else { item.classList.add( 'hide' )}
-            });
+                imagesArrWings.each(( index, item ) => {
+                    if(index === objWings.curImg) { item.classList.remove( 'hide' )}
+                    else { item.classList.add( 'hide' )}
+                });
             }
         }
         }
@@ -109,16 +109,16 @@ if( window.innerWidth > 485 ) {
     var tween = TweenMax.to(objArmor, 0.5,
         {
         curImg: imagesArrArmor.length - 1,	// animate propery curImg to number of images
-        roundProps: "curImg",		    // only integers so it can be used as an array index
-        repeat: 0,						// repeat 0 times
-        immediateRender: true,			// load first image automatically
-        ease: Linear.easeNone,			// show every image the same ammount of time
+        roundProps: "curImg",		        // only integers so it can be used as an array index
+        repeat: 0,						    // repeat 0 times
+        immediateRender: true,			    // load first image automatically
+        ease: Linear.easeNone,			    // show every image the same ammount of time
         onUpdate: function () {
             if( objArmor.curImg < 52 ) {
-            imagesArrArmor.each(( index, item ) => {
-                if(index === objArmor.curImg) { item.classList.remove( 'hide' )}
-                else { item.classList.add( 'hide' )}
-            });
+                imagesArrArmor.each(( index, item ) => {
+                    if(index === objArmor.curImg) { item.classList.remove( 'hide' )}
+                    else { item.classList.add( 'hide' )}
+                });
             }
         }
         }
