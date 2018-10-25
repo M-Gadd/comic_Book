@@ -12,20 +12,20 @@ soundBox.onclick = function() {
     $( '#sound-off' ).hide();
     $( '#sound-on' ).show();
     homeSound.loop = true;
-    if (bool){
-      audioVolumeIn(homeSound); 
-    } else {
+    // if (bool){
+    //   audioVolumeIn(homeSound); 
+    // } else {
       homeSound.play(); 
 
-    }
+    // }
   }
   else if( musicIsOn ) {
     musicIsOn = false;
     $( '#sound-off' ).show();
     $( '#sound-on' ).hide();
-    // homeSound.pause();  
-    audioVolumeOut(homeSound);
-    bool = true;
+    homeSound.pause();  
+    // audioVolumeOut(homeSound);
+    // bool = true;
   }
 
 }
