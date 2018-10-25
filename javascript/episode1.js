@@ -201,28 +201,30 @@
 // MUSIC THINGY
 ////////////////////////////////////////////////////////////////////
 
-var audio = new Audio('../audio/One_Republic_-_All_the_right_moves.mp3');
-var audio2 = new Audio('../audio/Cheb_Khaled-01.Cest_La_Vie.mp3');
-var audio3 = new Audio('../audio/03. She Wolf (Falling To Pieces) (Feat Sia) (www.SongsLover.pk).mp3')
-var allAudios = [audio, audio2, audio3];
-var allComics = document.querySelectorAll('.allComics');
-allComics.forEach(one => {
-  one.onclick = function(){
-    console.log(one);
-    if (one.getAttribute('id')[one.getAttribute('id').length-1] === '3') {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-      audio.play();
-    } else if ((one.getAttribute('id')[one.getAttribute('id').length-1] === '5' )) {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-      audio2.play();
-    } else {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-    }
-  }
-})
+// var audio = new Audio('../audio/One_Republic_-_All_the_right_moves.mp3');
+// var audio2 = new Audio('../audio/Cheb_Khaled-01.Cest_La_Vie.mp3');
+// var audio3 = new Audio('../audio/03. She Wolf (Falling To Pieces) (Feat Sia) (www.SongsLover.pk).mp3')
+// var allAudios = [audio, audio2, audio3];
+// var allComics = document.querySelectorAll('.allComics');
+// allComics.forEach(one => {
+//   one.onclick = function(){
+//     console.log(one);
+//     if (one.getAttribute('id')[one.getAttribute('id').length-1] === '3') {
+//       allAudios.forEach(one=>{
+//         one.pause();
+//       });
+//       audio.play();
+//     } else if ((one.getAttribute('id')[one.getAttribute('id').length-1] === '5' )) {
+//       allAudios.forEach(one=>{
+//         one.pause();
+//       });
+//       audio2.play();
+//     } else {
+//       allAudios.forEach(one=>{
+//         one.pause();
+//       });
+//     }
+//   }
+// })
+
+

@@ -1,0 +1,133 @@
+// this is needed for the inview library to work 
+!function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a(require("jquery")):a(jQuery)}(function(a){function i(){var b,c,d={height:f.innerHeight,width:f.innerWidth};return d.height||(b=e.compatMode,(b||!a.support.boxModel)&&(c="CSS1Compat"===b?g:e.body,d={height:c.clientHeight,width:c.clientWidth})),d}function j(){return{top:f.pageYOffset||g.scrollTop||e.body.scrollTop,left:f.pageXOffset||g.scrollLeft||e.body.scrollLeft}}function k(){if(b.length){var e=0,f=a.map(b,function(a){var b=a.data.selector,c=a.$element;return b?c.find(b):c});for(c=c||i(),d=d||j();e<b.length;e++)if(a.contains(g,f[e][0])){var h=a(f[e]),k={height:h[0].offsetHeight,width:h[0].offsetWidth},l=h.offset(),m=h.data("inview");if(!d||!c)return;l.top+k.height>d.top&&l.top<d.top+c.height&&l.left+k.width>d.left&&l.left<d.left+c.width?m||h.data("inview",!0).trigger("inview",[!0]):m&&h.data("inview",!1).trigger("inview",[!1])}}}var c,d,h,b=[],e=document,f=window,g=e.documentElement;a.event.special.inview={add:function(c){b.push({data:c,$element:a(this),element:this}),!h&&b.length&&(h=setInterval(k,250))},remove:function(a){for(var c=0;c<b.length;c++){var d=b[c];if(d.element===this&&d.data.guid===a.guid){b.splice(c,1);break}}b.length||(clearInterval(h),h=null)}},a(f).on("scroll resize scrollstop",function(){c=d=null}),!g.addEventListener&&g.attachEvent&&g.attachEvent("onfocusin",function(){d=null})});
+
+let audioP1_5      = new Audio('../../audio/EP5/LOOP 5.1.mp3');
+let audioP6_8      = new Audio('../../audio/EP5/LOOP 5.2.mp3');
+let audioP9_10     = new Audio('../../audio/EP5/LOOP 5.3.mp3');
+let audioP11_14    = new Audio('../../audio/EP5/LOOP 5.4.mp3');
+let audioP15_16    = new Audio('../../audio/EP5/LOOP 5.5.mp3');
+let audioP17_20    = new Audio('../../audio/EP5/LOOP 5.6.mp3');
+let audioP21_24    = new Audio('../../audio/EP5/LOOP 5.7.mp3');
+let audioP25_28    = new Audio('../../audio/EP5/LOOP 5.8.mp3');
+let audioP29       = new Audio('../../audio/EP5/LOOP 5.9.mp3');
+let audioP30_31    = new Audio('../../audio/EP5/LOOP 5.10.mp3');
+let audioP32_33    = new Audio('../../audio/EP5/LOOP 5.11.mp3');
+let audioP34       = new Audio('../../audio/EP5/LOOP 5.12.mp3');
+let audioP35_39    = new Audio('../../audio/EP5/LOOP 5.13.mp3');
+let audioP40_44    = new Audio('../../audio/EP5/LOOP 5.14.mp3');
+let audioP45       = new Audio('../../audio/EP5/LOOP 5.15.mp3');
+let audioP46       = new Audio('../../audio/EP5/LOOP 5.16.mp3');
+
+let allAudio = [
+  audioP1_5,
+  audioP6_8,
+  audioP9_10,
+  audioP11_14,
+  audioP15_16,
+  audioP17_20,
+  audioP21_24,
+  audioP25_28,
+  audioP29,
+  audioP30_31,
+  audioP32_33,
+  audioP34,
+  audioP35_39,
+  audioP40_44,
+  audioP45,
+  audioP46
+]
+
+
+
+
+let musicIsOn = false;
+let soundBox = document.querySelector( '#sound-box' );
+$( '#sound-on' ).hide();
+
+let id;
+let curr;
+
+
+soundBox.onclick = function() {
+  if( !musicIsOn ) {
+    musicIsOn = true;
+    $( '#sound-off' ).hide();
+    $( '#sound-on' ).show();
+
+    let index= 0;
+
+    if(curr){
+      allAudio[curr].play()
+    } else if(id) {
+      // if (index !== activeId ) {
+        allAudio[activeId].play();
+      // }
+    } else {
+      allAudio[index].play();
+    }
+    
+
+    $('.sounds').on('inview', function (event, visible) { //looping over all the images at once inseatd of targeting one at a time 
+      if (visible == true) {
+      let activeId = ''; // to reset with every image in view
+      if (this.getAttribute('id')) { // to not error when there is no ID
+        id = this.getAttribute('id').split('').forEach(one=>{
+          isNaN(one)? activeId = activeId  : activeId += one // to get the full number, otherwise the numbers will conflict after image 9
+        })
+      }
+    
+        
+      console.log(activeId);
+      // console.log(index);
+        if (allAudio[activeId] && activeId !== index  && musicIsOn === true ) { // to not error when the aciveId index doesn't exist in the audio array 
+          
+        if (allAudio[curr]) {
+            allAudio[curr].pause();
+          }
+          if (allAudio[index]) {
+            allAudio[index].pause();
+          }
+
+          allAudio[activeId].loop = true;
+          allAudio[activeId].play();
+          index = activeId;
+          curr = activeId;
+    
+        } 
+    
+        else { // having this 'else' here rathher than with the visibilty == true if statemet pronlonges the duration of thhe audio
+        allAudio.forEach(one=>{ // instead of having to stop them manually one by one  
+          one.pause();
+          console.log('paused')
+        })
+        }
+    
+      }
+    
+    });
+    
+  }
+  else if( musicIsOn ) {
+    musicIsOn = false;
+    $( '#sound-off' ).show();
+    $( '#sound-on' ).hide();
+
+    allAudio.forEach(one=>{ // instead of having to stop them manually one by one  
+      one.pause();
+      console.log('paused')
+    })
+
+    $('.sounds').on('inview', function (event, visible) { //looping over all the images at once inseatd of targeting one at a time 
+      if (visible == true) {
+      let activeId = ''; // to reset with every image in view
+      if (this.getAttribute('id')) { // to not error when there is no ID
+        id = this.getAttribute('id').split('').forEach(one=>{
+          isNaN(one)? activeId = activeId  : activeId += one // to get the full number, otherwise the numbers will conflict after image 9
+        })
+      }
+    // index = activeId;
+      curr = activeId;
+  }
+    })
+  }
+}

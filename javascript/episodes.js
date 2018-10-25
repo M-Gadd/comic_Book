@@ -68,24 +68,28 @@ $( '#full-screen-btn' )[0].onclick = function() {
 // MUSIC
 ////////////////////////////////////////////////////////////////////////////
 
-let musicIsOn = false;
-let soundBox = document.querySelector( '#sound-box' );
-$( '#sound-on' ).hide();
 
-soundBox.onclick = function() {
 
-  if( !musicIsOn ) {
-    musicIsOn = true;
-    $( '#sound-off' ).hide();
-    $( '#sound-on' ).show();
-  }
-  else if( musicIsOn ) {
-    musicIsOn = false;
-    $( '#sound-off' ).show();
-    $( '#sound-on' ).hide();
-  }
 
-}
+
+// let musicIsOn = false;
+// let soundBox = document.querySelector( '#sound-box' );
+// $( '#sound-on' ).hide();
+
+// soundBox.onclick = function() {
+//   if( !musicIsOn ) {
+//     musicIsOn = true;
+//     $( '#sound-off' ).hide();
+//     $( '#sound-on' ).show();
+    
+//   }
+//   else if( musicIsOn ) {
+//     musicIsOn = false;
+//     $( '#sound-off' ).show();
+//     $( '#sound-on' ).hide();
+//   }
+
+// }
 
 
   

@@ -1,4 +1,3 @@
-var bool = true;
 
 
 
@@ -85,24 +84,31 @@ $( '#full-screen-btn' )[0].onclick = function() {
 // MUSIC
 ////////////////////////////////////////////////////////////////////////////
 
-let musicIsOn = false;
-let soundBox = document.querySelector( '#sound-box' );
-$( '#sound-on' ).hide();
+// let homeSound = new Audio('../../../work/comic_book/audio/Cheb_Khaled-01.Cest_La_Vie.mp3');
 
-soundBox.onclick = function() {
+// let musicIsOn = false;
+// let soundBox = document.querySelector( '#sound-box' );
+// $( '#sound-on' ).hide();
 
-  if( !musicIsOn ) {
-    musicIsOn = true;
-    $( '#sound-off' ).hide();
-    $( '#sound-on' ).show();
-  }
-  else if( musicIsOn ) {
-    musicIsOn = false;
-    $( '#sound-off' ).show();
-    $( '#sound-on' ).hide();
-  }
+// soundBox.onclick = function() {
+//   homeSound.oncanplay = () => {
+//     homeSound.play();
+//   };
+//   if( !musicIsOn ) {
+//     musicIsOn = true;
+//     $( '#sound-off' ).hide();
+//     $( '#sound-on' ).show();
+    
+    
 
-}
+//   }
+//   else if( musicIsOn ) {
+//     musicIsOn = false;
+//     $( '#sound-off' ).show();
+//     $( '#sound-on' ).hide();
+//   }
+
+// }
 
 
 
@@ -112,45 +118,39 @@ soundBox.onclick = function() {
 
 // var bool = true;
 let isClicked = false;
-var episodes = document.querySelectorAll('.episodes')
+let noGlow = document.querySelectorAll('.no-glow');
+let glow = document.querySelectorAll( '.glow' );
+let id;
 
-$( '.bg' ).toggle();
+$( '.bg' ).hide();
+$( '#hyperspace-gif' ).hide();
 
-episodes.forEach(one => {
-  
-  // document.querySelectorAll( '.bg' ).setAttribute( 'visibility', 'hidden' );
-  
+
+let boxes = document.querySelectorAll( '.episode-box' );
+
+boxes.forEach( each => {
+
   // ON CLICK /////////////
-  one.onclick = function(){
+  each.onclick = function(){
     isClicked = true;
-    let id = one.getAttribute('id');
+    let id = each.getAttribute('id').slice(1);
     $( '.bg' ).hide();
-    document.body.style.backgroundImage = `url('./images/homepage/homepage-gif-bcg.gif')`;
+    $( '#hyperspace-gif' ).show();
     setTimeout(() => {
-      window.location.href = `./last-quest/episode${id}.html`;
-    }, 2000);
+      window.location.href = `./episode${id}.html`;
+    }, 1800);
   }
 
-  
   // ON HOVER /////////////
-  one.onmouseover = function(){
-      if( !isClicked ) {
-        let id = one.getAttribute('id');
-        console.log( $(`#bg-${id}`)[0] );
-        $(`#bg-${id}`).toggle();
-        one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/glow/ep${id}_glow.png` );
-      }
+  each.onmouseover = function(){
+    if( !isClicked ) {
+      let id = each.getAttribute('id').slice(1);
+      $( '.bg' ).hide();
+      $(`#bg-${ id }`).show();
+      $( '.no-glow' ).show();
+      $( `#${ id }` ).hide();
     }
-    
-    // ON MOUSE OUT /////////////
-  //   one.onmouseout = function(){
-  //     if( !isClicked ) {
-  //       let id = one.getAttribute('id');
-  //       $( '.bg' ).hide();
-  //       one.setAttribute( 'src', `./images/homepage/episodes-titles-EN/noglow/ep${id}_noglow.png` );
-  //       document.body.style.backgroundImage = `url('./images/homepage/trees-3464777_1920.jpg')`;
-  //     }
-  // }
+  }
 
   // ON MOUSE OUT /////////////
   each.onmouseout = function(){
@@ -158,7 +158,8 @@ episodes.forEach(one => {
       $( '.bg' ).hide();
       $( '.no-glow' ).show();
     }
-  } 
+  }
+
 })
 
 
@@ -219,44 +220,5 @@ episodes.forEach(one => {
 // ep6.onclick = function(){
 //   window.location.href = './html/episode6.html';
 // }
-
-// }
-
-var homeAudio = new Audio('../audio/1 MENU/LOOP_Menu.mp3')
-
-
-
-var audio = new Audio('../audio/One_Republic_-_All_the_right_moves.mp3');
-var audio2 = new Audio('../audio/Cheb_Khaled-01.Cest_La_Vie.mp3');
-var audio3 = new Audio('../audio/03. She Wolf (Falling To Pieces) (Feat Sia) (www.SongsLover.pk).mp3')
-var allAudios = [audio, audio2, audio3];
-var allComics = document.querySelectorAll('.allComics');
-allComics.forEach(one => {
-  one.onclick = function(){
-    console.log(one);
-    if (one.getAttribute('id')[one.getAttribute('id').length-1] === '3') {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-      audio.play();
-    } else if ((one.getAttribute('id')[one.getAttribute('id').length-1] === '5' )) {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-      audio2.play();
-    } else {
-      allAudios.forEach(one=>{
-        one.pause();
-      });
-    }
-  }
-})
-
-
-
-
-// for (let i=0; i<= 38; i++ ) {
-
-//   document.body.style.backgroundImage = `url('./images/episode/sanasndaskdas${i}')`
 
 // }
