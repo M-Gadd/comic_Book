@@ -32,8 +32,6 @@
   if( window.innerWidth > 485 ) {
 
 
-
-
   var controller = new ScrollMagic.Controller({vertical: true});
 
 
