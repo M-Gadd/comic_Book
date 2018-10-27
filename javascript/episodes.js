@@ -5,6 +5,31 @@
 // LOADER
 ////////////////////////////////////////////////////////////////////////////
 
+
+
+var audioArray = new Array();
+
+$( document ).ready(function() {
+
+
+
+
+
+  //Reload on resize
+   $(window).resize(function(){
+       $(window).unbind('scroll');
+
+     console.log("resize");
+     $(window).scrollTop($(window).scrollTop()+1);
+   
+
+     location.reload();
+     
+   });
+   
+   
+   });
+
 $(window).on( "load", () => {
   $( '.loader' ).fadeOut( 1000 );
   $( '.main' ).fadeIn( 1000 );
@@ -13,6 +38,25 @@ $(window).on( "load", () => {
     'overflow': 'visible'
   })
 });
+
+
+function activateAudio(){
+  var allaudio = $('audio').length;
+ 
+ var location = new Array();
+    var edges = new Array();
+    
+    var imgHeight = $(window).height();
+    var fadeDuration = $(window).height();
+    
+      for(var i=0;i<allaudio;i++){
+        var offset = $('.sounds').eq(i).offset();
+        location[i] = Math.floor(offset.top);
+        edges[i] = $('.sounds').eq(i).height();
+        var count = i+1;
+        audioArray[i] = new AudioFade('#S' + count, location[i] - imgHeight, location[i] + edges[i] - imgHeight,fadeDuration).init();
+      }
+    }
 
 
 
@@ -72,24 +116,28 @@ $( '#full-screen-btn' )[0].onclick = function() {
 
 
 
-// let musicIsOn = false;
-// let soundBox = document.querySelector( '#sound-box' );
-// $( '#sound-on' ).hide();
+let musicIsOn = false;
+let soundBox = document.querySelector( '#sound-box' );
+$( '#sound-on' ).hide();
 
-// soundBox.onclick = function() {
-//   if( !musicIsOn ) {
-//     musicIsOn = true;
-//     $( '#sound-off' ).hide();
-//     $( '#sound-on' ).show();
+soundBox.onclick = function() {
+  if( !musicIsOn ) {
+    musicIsOn = true;
+    $( '#sound-off' ).hide();
+    $( '#sound-on' ).show();
+  activateAudio();
     
-//   }
-//   else if( musicIsOn ) {
-//     musicIsOn = false;
-//     $( '#sound-off' ).show();
-//     $( '#sound-on' ).hide();
-//   }
+  }
+  else if( musicIsOn ) {
+    musicIsOn = false;
+    $( '#sound-off' ).show();
+    $( '#sound-on' ).hide();
 
-// }
+    delete activateAudio();
+    $(window).unbind('scroll');
+  }
+
+}
 
 
   
