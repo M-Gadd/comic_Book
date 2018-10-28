@@ -6,19 +6,19 @@
   
   // Function is triggered everytimethe window is resized, no matter in what way
   
-  function resized() {
+  // function resized() {
     
-    if( window.innerHeight >= (screen.height * 0.90) ) {
-      fullScreen = true;
-    }
-    else {
-      fullScreen = false;
-    }
+  //   if( window.innerHeight >= (screen.height * 0.90) ) {
+  //     fullScreen = true;
+  //   }
+  //   else {
+  //     fullScreen = false;
+  //   }
     
-    refreshParallaxes();
-  };
+  //   refreshParallaxes();
+  // };
   
-  window.onresize = resized;
+  // window.onresize = resized;
   
   
   ////////////////////////////////////////////////////////////////////////////
@@ -35,9 +35,9 @@
   var controller = new ScrollMagic.Controller({vertical: true});
 
 
-  refreshParallaxes();
+  // refreshParallaxes();
 
-  function refreshParallaxes() {
+  // function refreshParallaxes() {
 
     // console.log( 'screen is full:', fullScreen );
     // TOAD /////////////////////////////////
@@ -189,7 +189,7 @@
     //   .addTo(controller)
     // }
 
-  }
+  // }
 
 }
 

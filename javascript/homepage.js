@@ -86,7 +86,6 @@ $( '#full-screen-btn' )[0].onclick = function() {
 
 let homeSound = new Audio('../../audio/LOOP_Menu.mp3');
 
-
 let musicIsOn = false;
 let soundBox = document.querySelector( '#sound-box' );
 $( '#sound-on' ).hide();
