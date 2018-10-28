@@ -1,1 +1,1 @@
-window.location.href = `./../last-quest/EN/index.html`;
+window.location.href = `./../last-quest/FR/index.html`;
