@@ -87,16 +87,20 @@ body {
  * =========================================
  */
 
-.main{
+#mobile-logo {
+  display: none;
+}
+
+#cockpit-full {
+  width: 100%;
+}
+
+/* .main{
   position: relative;
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
-}
-
-#mobile-logo {
-  display: none;
 }
 
 #cockpit-elements {
@@ -160,24 +164,24 @@ body {
 }
 
 #bg-2 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep2.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep2.png" );
 }
 
 #bg-3 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep3.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep3.png" );
 }
 
 #bg-4 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep4.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep4.png" );
 }
 
 #bg-5 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep5.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep5.png" );
 }
 
 #bg-6 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep6.png" );
-}
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep6.png" );
+} */
 
 .bottom-gradient {
   display: none;
@@ -191,6 +195,8 @@ body {
  */
 
  .home-menu {
+  position: absolute;
+  top: 15vw;
   height: auto;
   width: 320px;
   margin-left: 40px;
@@ -325,7 +331,8 @@ footer img {
 
   #full-screen-btn,
   #cockpit-bcg-up,
-  #cockpit-bcg-down
+  #cockpit-bcg-down,
+  #cockpit-full
   {
     display: none;
   }
@@ -340,6 +347,7 @@ footer img {
   }
 
   #mobile-logo {
+    position: relative;
     display: block;
     width: 70vw;
     z-index: 20;
@@ -360,8 +368,8 @@ footer img {
   .home-menu {
     margin: 0 auto;
     position: relative;
-    top: 30%;
-    transform: translateY( -50% );
+    /* top: 50%; */
+    /* transform: translateY( -50% ); */
   }
   
   .bottom-gradient {

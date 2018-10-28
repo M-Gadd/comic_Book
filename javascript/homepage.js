@@ -132,13 +132,15 @@ boxes.forEach( each => {
 
   // ON CLICK /////////////
   each.onclick = function(){
-    isClicked = true;
     let id = each.getAttribute('id').slice(1);
-    $( '.bg' ).hide();
-    $( '#hyperspace-gif' ).show();
-    setTimeout(() => {
-      window.location.href = `./episode${id}.html`;
-    }, 1800);
+    if( id == 1 ) {
+      isClicked = true;
+      $( '.bg' ).hide();
+      $( '#hyperspace-gif' ).show();
+      setTimeout(() => {
+        window.location.href = `./episode${id}.html`;
+      }, 1800);
+    }
   }
 
   // ON HOVER /////////////

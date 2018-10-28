@@ -1,5 +1,16 @@
 
 
+let url = window.location.href
+let language = url.includes( "FR" ) ? "FR" : "EN";
+if(
+  url.includes( "episode2" ) ||
+  url.includes( "episode3" ) ||
+  url.includes( "episode4" ) ||
+  url.includes( "episode5" ) ||
+  url.includes( "episode6" )
+  ) {
+    window.location.href = `./../${ language }/index.html`;
+  }
 
 ////////////////////////////////////////////////////////////////////////////
 // LOADER
@@ -15,7 +26,7 @@ $( document ).ready(function() {
 
 
 
-  //Reload on resize
+  // Reload on resize
    $(window).resize(function(){
        $(window).unbind('scroll');
 
@@ -145,23 +156,30 @@ soundBox.onclick = function() {
 // FOOTER
 ////////////////////////////////////////////////////////////////////////////
 
-let url = window.location.href
+// let url = window.location.href
 let episodeNumber = url.includes( 1 ) ? 1
                   : url.includes( 2 ) ? 2
                   : url.includes( 3 ) ? 3
                   : url.includes( 4 ) ? 4
                   : url.includes( 5 ) ? 5
                   : 6;
+// let language = url.includes( "FR" ) ? "FR" : "EN";
 
 $( '#prev' )[0].onclick = () => {
   if( episodeNumber > 1 ) {
     window.location.href = `./episode${ episodeNumber - 1 }.html`;
+  }
+  else {
+    window.location.href = `./../${ language }/index.html`;
   }
 }
 
 $( '#next' )[0].onclick = () => {
   if( episodeNumber < 6 ) {
     window.location.href = `./episode${ episodeNumber + 1 }.html`;
+  }
+  else {
+    window.location.href = `./../${ language }/index.html`;
   }
 }
 
