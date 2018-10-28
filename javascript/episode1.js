@@ -206,7 +206,7 @@
 // var allComics = document.querySelectorAll('.allComics');
 // allComics.forEach(one => {
 //   one.onclick = function(){
-//     // console.log(one);
+//     console.log(one);
 //     if (one.getAttribute('id')[one.getAttribute('id').length-1] === '3') {
 //       allAudios.forEach(one=>{
 //         one.pause();
@@ -224,3 +224,5 @@
 //     }
 //   }
 // })
+
+

@@ -82,21 +82,31 @@ $( '#full-screen-btn' )[0].onclick = function() {
 // MUSIC
 ////////////////////////////////////////////////////////////////////////////
 
+// let homeSound = new Audio('../../../work/comic_book/audio/Cheb_Khaled-01.Cest_La_Vie.mp3');
+
+let homeSound = new Audio('../../audio/LOOP_Menu.mp3');
+
+
 let musicIsOn = false;
 let soundBox = document.querySelector( '#sound-box' );
 $( '#sound-on' ).hide();
 
 soundBox.onclick = function() {
-
+  homeSound.oncanplay = () => {
+    
+  };
   if( !musicIsOn ) {
     musicIsOn = true;
     $( '#sound-off' ).hide();
     $( '#sound-on' ).show();
+    homeSound.loop = true;
+    homeSound.play();
   }
   else if( musicIsOn ) {
     musicIsOn = false;
     $( '#sound-off' ).show();
     $( '#sound-on' ).hide();
+    homeSound.pause();  
   }
 
 }
