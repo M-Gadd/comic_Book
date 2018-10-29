@@ -199,6 +199,12 @@ iframe {
 
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+    #sound-box {
+      display: none;
+    }
+}
+
 
 /* EPISODE 2
  * =========================================

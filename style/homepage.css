@@ -375,3 +375,10 @@ footer img {
   }
 
 }
+
+@supports (-webkit-overflow-scrolling: touch) {
+  /* CSS specific to iOS devices */
+  #sound-box {
+    display: none;
+  }
+}

@@ -27,16 +27,16 @@ $( document ).ready(function() {
 
 
   // Reload on resize
-   $(window).resize(function(){
-       $(window).unbind('scroll');
+  //  $(window).resize(function(){
+  //      $(window).unbind('scroll');
 
-     console.log("resize");
-     $(window).scrollTop($(window).scrollTop()+1);
+  //    console.log("resize");
+  //    $(window).scrollTop($(window).scrollTop()+1);
    
 
-     location.reload();
+  //    location.reload();
      
-   });
+  //  });
    
    
    });
