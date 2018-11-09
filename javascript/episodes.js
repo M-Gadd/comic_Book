@@ -3,9 +3,8 @@
 let url = window.location.href
 let language = url.includes( "FR" ) ? "FR" : "EN";
 if(
-  url.includes( "episode2" ) ||
-  url.includes( "episode3" ) ||
-  url.includes( "episode4" ) ||
+  // url.includes( "episode3" ) ||
+  // url.includes( "episode4" ) ||
   url.includes( "episode5" ) ||
   url.includes( "episode6" )
   ) {
@@ -48,6 +47,7 @@ $(window).on( "load", () => {
     'height': 'auto',
     'overflow': 'visible'
   })
+  $("img").unveil();
 });
 
 
@@ -105,14 +105,19 @@ function closeFullscreen() {
 }
 
 let isFullScreen = false;
+$( '#full-screen-off' ).hide();
 
-$( '#full-screen-btn' )[0].onclick = function() {
+$( '#full-screen-box' )[0].onclick = function( e ) {
   if( !isFullScreen ) {
     isFullScreen = true;
+    $( '#full-screen-on' ).toggle();
+    $( '#full-screen-off' ).toggle();
     openFullscreen();
   }
   if( isFullScreen ) {
     isFullScreen = false;
+    // $( '#full-screen-off' ).toggle();
+    // $( '#full-screen-on' ).toggle();
     closeFullscreen();
   }
 }
@@ -123,32 +128,31 @@ $( '#full-screen-btn' )[0].onclick = function() {
 // MUSIC
 ////////////////////////////////////////////////////////////////////////////
 
-
-
-
-
 let musicIsOn = false;
-let soundBox = document.querySelector( '#sound-box' );
+let soundBox = document.querySelectorAll( '#sound-box, .P2' );
 $( '#sound-on' ).hide();
 
-soundBox.onclick = function() {
-  if( !musicIsOn ) {
-    musicIsOn = true;
-    $( '#sound-off' ).hide();
-    $( '#sound-on' ).show();
-  activateAudio();
-    
-  }
-  else if( musicIsOn ) {
-    musicIsOn = false;
-    $( '#sound-off' ).show();
-    $( '#sound-on' ).hide();
+soundBox.forEach( each => {
 
-    delete activateAudio();
-    $(window).unbind('scroll');
+  each.onclick = function() {
+    if( !musicIsOn ) {
+      musicIsOn = true;
+      $( '#sound-off' ).hide();
+      $( '#sound-on' ).show();
+      activateAudio();
+      
+    }
+    else if( musicIsOn ) {
+      musicIsOn = false;
+      $( '#sound-off' ).show();
+      $( '#sound-on' ).hide();
+      
+      delete activateAudio();
+      $(window).unbind('scroll');
+    }
   }
 
-}
+})
 
 
   
@@ -163,7 +167,6 @@ let episodeNumber = url.includes( 1 ) ? 1
                   : url.includes( 4 ) ? 4
                   : url.includes( 5 ) ? 5
                   : 6;
-// let language = url.includes( "FR" ) ? "FR" : "EN";
 
 $( '#prev' )[0].onclick = () => {
   if( episodeNumber > 1 ) {

@@ -68,13 +68,11 @@ body {
   justify-content: space-between;
 }
 
-#full-screen-btn {
-  height: 25px;
-}
-
-#sound-box img {
-  height: 25px;
-  width: 25px;
+#sound-box img,
+#full-screen-box img
+{
+  height: 30px;
+  width: 30px;
 }
 
 .header img:hover {
@@ -160,15 +158,15 @@ body {
 }
 
 #bg-2 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep2.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep2.png" );
 }
 
 #bg-3 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep3.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep3.png" );
 }
 
 #bg-4 {
-  background-image: url( "./../../images/homepage/episode-backgrounds/locked/fond_ep4.png" );
+  background-image: url( "./../../images/homepage/episode-backgrounds/fond_ep4.jpg" );
 }
 
 #bg-5 {
@@ -323,7 +321,7 @@ footer img {
     flex-direction: column;
   }
 
-  #full-screen-btn,
+  #full-screen-box,
   #cockpit-bcg-up,
   #cockpit-bcg-down
   {
@@ -354,7 +352,7 @@ footer img {
     position: fixed;
     width: 25px;
     top: 10px;
-    right: 10px;
+    right: 15px;
   }
   
   .home-menu {

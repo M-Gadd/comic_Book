@@ -36,7 +36,7 @@
  * =========================================
  */
 
-#full-screen-btn:hover,
+#full-screen-box:hover,
 #sound-box:hover {
     cursor: pointer;
 }
@@ -48,7 +48,6 @@
     width: 80px;
     display: flex;
     justify-content: space-between;
-    opacity: 0.3;
 }
 
 .right-hand-menu img {
@@ -120,7 +119,7 @@ footer nav {
 }
 
 footer nav img {
-    width: 40px;
+    width: 50px;
     align-self: center;
 }
 
@@ -176,7 +175,7 @@ iframe {
         width: 100vw;
     }
 
-    #full-screen-btn {
+    #full-screen-box {
         display: none;
     }
 

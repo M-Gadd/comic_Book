@@ -64,14 +64,19 @@ function closeFullscreen() {
 }
 
 let isFullScreen = false;
+$( '#full-screen-off' ).hide();
 
-$( '#full-screen-btn' )[0].onclick = function() {
+$( '#full-screen-box' )[0].onclick = function( e ) {
   if( !isFullScreen ) {
     isFullScreen = true;
+    $( '#full-screen-on' ).toggle();
+    $( '#full-screen-off' ).toggle();
     openFullscreen();
   }
   if( isFullScreen ) {
     isFullScreen = false;
+    // $( '#full-screen-off' ).toggle();
+    // $( '#full-screen-on' ).toggle();
     closeFullscreen();
   }
 }
@@ -133,7 +138,7 @@ boxes.forEach( each => {
   // ON CLICK /////////////
   each.onclick = function(){
     let id = each.getAttribute('id').slice(1);
-    if( id == 1 ) {
+    if( id == 1 || id == 2 || id == 3 || id == 4 ) {
       isClicked = true;
       $( '.bg' ).hide();
       $( '#hyperspace-gif' ).show();

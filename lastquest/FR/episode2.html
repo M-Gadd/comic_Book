@@ -13,9 +13,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta property="og:url"                content="http://prieur-malgras.com/lastquest/FR/episode2.html" />
+  <meta property="og:type"               content="website" />
+  <meta property="og:title"              content="LAST QUEST Épisode II - Jungle" />
+  <meta property="og:image"              content="https://raw.githubusercontent.com/M-Gadd/comic_Book/master/social-sharing/EP2-new.jpg" />
+  <meta property="og:image:url"          content="https://raw.githubusercontent.com/M-Gadd/comic_Book/master/social-sharing/EP2-new.jpg" />
+  <meta property="og:image:type"         content="image/png" />
+  <meta property="og:image:width"        content="1535" />
+  <meta property="og:image:height"       content="803" />
+  <meta property="og:image:alt"          content="Nos héros sont faits prisonniers" />
+  
   <link rel="stylesheet" href="./../../style/reset.css">
   <link rel="stylesheet" href="./../../style/episodes.css">
-  <title>Episode 2</title>
+  <title>Last Quest - Épisode 2 - Jungle</title>
 </head>
 <body>
 
@@ -47,60 +58,64 @@
 
     <div class="right-hand-menu">
         <div id="sound-box">
-          <img id="sound-off" src="./../../images/Sound_off.png" alt="">
-          <img id="sound-on" src="./../../images/Sound_on.png" alt="">
+          <img id="sound-off" src="./../../images/general/sound_off.png" alt="">
+          <img id="sound-on" src="./../../images/general/sound_on.png" alt="">
         </div>
-        <img id="full-screen-btn" src="./../../images/homepage/fullscreen.png" alt="">
+        <div id="full-screen-box">
+          <img id="full-screen-on" src="./../../images/general/fullscreen_white.png" alt="">
+          <img id="full-screen-off" src="./../../images/general/back_fullscreen_white.png" alt="">
+        </div>
       </div>
     </div>
 
   <div class="sounds" id="sound0">
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P1M.gif" media="(max-width: 480px)">
+      <!-- <img src="./../../images/general/placeholder.gif" alt=""> -->
       <img src="./../../images/FR/episode-2/P1.gif" alt="">
     </picture>
     <picture>
-      <source srcset="./../../images/FR/mobile/episode-2/P2M.gif" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P2.gif" alt="">
+      <source class="P2" srcset="./../../images/FR/mobile/episode-2/P2M.gif" media="(max-width: 480px)">
+      <img class="P2" src="./../../images/FR/episode-2/P2.gif" alt="">
     </picture>
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P3M.gif" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P3.gif" alt="">
+      <img src="./../../images/general/placeholder.gif" data-src="./../../images/FR/episode-2/P3.gif" alt="">
     </picture>
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P4M.gif" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P4.gif" alt="">
+      <img src="./../../images/general/placeholder.gif" data-src="./../../images/FR/episode-2/P4.gif" alt="">
     </picture>
   </div>
 
   <div class="sounds" id="sound1">
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P5M.gif" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P5.gif" alt="">
+      <img  src="./../../images/general/placeholder.gif" data-src="./../../images/FR/episode-2/P5.gif" alt="">
     </picture>
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P6M.gif" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P6.gif" alt="">
+      <img src="./../../images/general/placeholder.gif" data-src="./../../images/FR/episode-2/P6.gif" alt="">
     </picture>
   </div>
 
   <div class="sounds" id="sound2">
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P7M.gif" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P7.gif" alt="">
+      <img src="./../../images/general/placeholder.gif" data-src="./../../images/FR/episode-2/P7.gif" alt="">
     </picture>
   </div>
 
   <div class="sounds" id="sound3">
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P8M.png" media="(max-width: 480px)">
-      <img src="./../../images/FR/episode-2/P8.png" alt="">
+      <img src="./../../images/general/placeholder.gif" data-src="./../../images/FR/episode-2/P8.png" alt="">
     </picture>
 
     <div class="parallax forest">
       <picture>
         <source srcset="./../../images/FR/mobile/episode-2/P9M.png" media="(max-width: 480px)">
-      <img class="bcg bcg-forest" src="./../../images/FR/episode-2/P9_plan5.png" alt="">
+        <img class="bcg bcg-forest" src="./../../images/FR/episode-2/P9_plan5.png" alt="">
     </picture>
       <img class="mobile-hide foreground forest-4" src="./../../images/FR/episode-2/P9_plan4.png" alt="">
       <img class="mobile-hide foreground forest-3" src="./../../images/FR/episode-2/P9_plan3.png" alt="">
@@ -268,13 +283,12 @@
     </picture>
   </div>
 
-
+  <div class="sounds" id="sound13">
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P43M.gif" media="(max-width: 480px)">
       <img src="./../../images/FR/episode-2/P43.gif" alt="">
     </picture>
 
-  <div class="sounds" id="sound13">
     <picture>
       <source srcset="./../../images/FR/mobile/episode-2/P44M.gif" media="(max-width: 480px)">
       <img src="./../../images/FR/episode-2/P44.gif" alt="">
@@ -328,7 +342,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
   <script src="./../../javascript/episode2.js"></script>
   <script src="./../../javascript/episodes.js"></script>
-  <!-- <script src="../../javascript/music/ep2Aud.js"></script> -->
 
 </body>
 <script src="../../javascript/js/AudioFade.js"></script>
