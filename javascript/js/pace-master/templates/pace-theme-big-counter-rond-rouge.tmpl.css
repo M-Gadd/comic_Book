@@ -1,0 +1,49 @@
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .pace.pace-inactive .pace-progress {
+    display: none;
+  }
+  
+  .pace .pace-progress {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+  
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -ms-transform: translate3d(0, 0, 0) !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+  
+  .pace .pace-progress:after {
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: red;
+    /* border-image: linear-gradient(#f6b73c, #4d9f0c) 30; */
+    content: attr(data-progress-text);
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 100;
+    font-size: 5rem;
+    line-height: 200px;
+    text-align: center;
+    color: white;
+  }
+  

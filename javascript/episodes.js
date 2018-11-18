@@ -3,7 +3,6 @@
 let url = window.location.href
 let language = url.includes( "FR" ) ? "FR" : "EN";
 if(
-  // url.includes( "episode3" ) ||
   // url.includes( "episode4" ) ||
   url.includes( "episode5" ) ||
   url.includes( "episode6" )
@@ -19,35 +18,14 @@ if(
 
 var audioArray = new Array();
 
-$( document ).ready(function() {
-
-
-
-
-
-  // Reload on resize
-  //  $(window).resize(function(){
-  //      $(window).unbind('scroll');
-
-  //    console.log("resize");
-  //    $(window).scrollTop($(window).scrollTop()+1);
-   
-
-  //    location.reload();
-     
-  //  });
-   
-   
-   });
-
 $(window).on( "load", () => {
-  $( '.loader' ).fadeOut( 1000 );
+  // $( '.loader' ).fadeOut( 1000 );
   $( '.main' ).fadeIn( 1000 );
   $( '.main' ).css({
     'height': 'auto',
     'overflow': 'visible'
   })
-  $("img").unveil();
+  $('img').unveil( 2000 );
 });
 
 
@@ -160,20 +138,20 @@ soundBox.forEach( each => {
 // FOOTER
 ////////////////////////////////////////////////////////////////////////////
 
-// let url = window.location.href
-let episodeNumber = url.includes( 1 ) ? 1
-                  : url.includes( 2 ) ? 2
-                  : url.includes( 3 ) ? 3
-                  : url.includes( 4 ) ? 4
-                  : url.includes( 5 ) ? 5
+let episodeNumber = url.includes( 'episode1' ) ? 1
+                  : url.includes( 'episode2' ) ? 2
+                  : url.includes( 'episode3' ) ? 3
+                  : url.includes( 'episode4' ) ? 4
+                  : url.includes( 'episode5' ) ? 5
                   : 6;
+let isMobile = url.includes('mobile') ? '../' : '';
 
 $( '#prev' )[0].onclick = () => {
   if( episodeNumber > 1 ) {
     window.location.href = `./episode${ episodeNumber - 1 }.html`;
   }
   else {
-    window.location.href = `./../${ language }/index.html`;
+    window.location.href = `./../${ isMobile }${ language }/index.html`
   }
 }
 
@@ -182,10 +160,10 @@ $( '#next' )[0].onclick = () => {
     window.location.href = `./episode${ episodeNumber + 1 }.html`;
   }
   else {
-    window.location.href = `./../${ language }/index.html`;
+    window.location.href = `./../${ isMobile }${ language }/index.html`
   }
 }
 
 $( '#menu' )[0].onclick = () => {
-  window.location.href = `./index.html`;
+  window.location.href = `./${ isMobile }index.html`
 }

@@ -6,9 +6,8 @@
 ////////////////////////////////////////////////////////////////////////////
 
 $( 'footer' ).hide();
-
 $(window).on( "load", () => {
-  $( '.loader' ).fadeOut( 1000 );
+  // $( '.loader' ).fadeOut( 1000 );
   $( 'footer' ).show();
 });
 
@@ -138,13 +137,20 @@ boxes.forEach( each => {
   // ON CLICK /////////////
   each.onclick = function(){
     let id = each.getAttribute('id').slice(1);
-    if( id == 1 || id == 2 || id == 3 || id == 4 ) {
+    if( id != 5 || id != 6 ) {
       isClicked = true;
       $( '.bg' ).hide();
       $( '#hyperspace-gif' ).show();
-      setTimeout(() => {
-        window.location.href = `./episode${id}.html`;
-      }, 1800);
+      if( window.innerWidth > 485 ) {
+        setTimeout(() => {
+          window.location.href = `./episode${id}.html`;
+        }, 1800);
+      }
+      else {
+        setTimeout(() => {
+          window.location.href = `./mobile/episode${id}.html`;
+        }, 1800);
+      }
     }
   }
 

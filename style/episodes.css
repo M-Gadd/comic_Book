@@ -128,9 +128,14 @@ footer nav img {
 }
 
 iframe {
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
+.credits {
+    width: 95vw;
+    margin-left: 50%;
+    transform: translateX( -50% );
+}
 
 
 /* MOBILE & TABLET
@@ -194,6 +199,10 @@ iframe {
     nav {
         width: 80%;
         margin: 0 auto;
+    }
+
+    .credits {
+        width: 105vw;
     }
 
 }
