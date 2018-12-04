@@ -1,14 +1,5 @@
 
 
-let url = window.location.href
-let language = url.includes( "FR" ) ? "FR" : "EN";
-if(
-  // url.includes( "episode4" ) ||
-  url.includes( "episode5" ) ||
-  url.includes( "episode6" )
-  ) {
-    window.location.href = `./../${ language }/index.html`;
-  }
 
 ////////////////////////////////////////////////////////////////////////////
 // LOADER
@@ -138,6 +129,7 @@ soundBox.forEach( each => {
 // FOOTER
 ////////////////////////////////////////////////////////////////////////////
 
+let url = window.location.href;
 let episodeNumber = url.includes( 'episode1' ) ? 1
                   : url.includes( 'episode2' ) ? 2
                   : url.includes( 'episode3' ) ? 3

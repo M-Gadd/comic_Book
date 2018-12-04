@@ -137,7 +137,6 @@ boxes.forEach( each => {
   // ON CLICK /////////////
   each.onclick = function(){
     let id = each.getAttribute('id').slice(1);
-    if( id != 5 || id != 6 ) {
       isClicked = true;
       $( '.bg' ).hide();
       $( '#hyperspace-gif' ).show();
@@ -151,7 +150,6 @@ boxes.forEach( each => {
           window.location.href = `./mobile/episode${id}.html`;
         }, 1800);
       }
-    }
   }
 
   // ON HOVER /////////////
