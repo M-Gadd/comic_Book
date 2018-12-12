@@ -23,20 +23,20 @@ $(window).on( "load", () => {
 function activateAudio(){
   var allaudio = $('audio').length;
  
- var location = new Array();
-    var edges = new Array();
-    
-    var imgHeight = $(window).height();
-    var fadeDuration = $(window).height();
-    
-      for(var i=0;i<allaudio;i++){
-        var offset = $('.sounds').eq(i).offset();
-        location[i] = Math.floor(offset.top);
-        edges[i] = $('.sounds').eq(i).height();
-        var count = i+1;
-        audioArray[i] = new AudioFade('#S' + count, location[i] - imgHeight, location[i] + edges[i] - imgHeight,fadeDuration).init();
-      }
-    }
+  var location = new Array();
+  var edges = new Array();
+  
+  var imgHeight = $(window).height();
+  var fadeDuration = $(window).height();
+  
+  for(var i=0;i<allaudio;i++){
+    var offset = $('.sounds').eq(i).offset();
+    location[i] = Math.floor(offset.top);
+    edges[i] = $('.sounds').eq(i).height();
+    var count = i+1;
+    audioArray[i] = new AudioFade('#S' + count, location[i] - imgHeight, location[i] + edges[i] - imgHeight,fadeDuration).init();
+  }
+}
 
 
 
